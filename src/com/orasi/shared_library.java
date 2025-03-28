@@ -1,5 +1,5 @@
 /**
- * @version 0
+ * @version 1
  *
  */
  package com.orasi;
@@ -233,6 +233,34 @@
 
 if ( contextName != null ) {
   contextMap.put( contextName, webDriver.getCurrentUrl() );
+}
+ if ( variableMap != null ) {
+   variableMap.clear();
+ }
+}
+
+ /**
+ * A check for element visibility
+ */
+ public static void Visible_v1( int executionId, int stepIdentifier, int testExecutionId, WebDriver webDriver, Map<String,Object> variableMap, Map<String,Object> contextMap, String contextName, Stack<String> callStack, Stack<Integer> stepStack )
+ {
+ 
+   By targetLocator = (By) variableMap.get( "targetLocator" );
+ 
+
+ WebElement targetElement;
+try {
+  targetElement = webDriver.findElement(targetLocator);
+} catch (Exception e) {
+  throw new IllegalArgumentException( "Unable to locate element", e );
+}
+
+if ( contextName != null ) {
+  contextMap.put( contextName, targetElement.isDisplayed() );
+}
+
+if ( !targetElement.isDisplayed() ) {
+  throw new IllegalArgumentException( "Element was found but not visible" );
 }
  if ( variableMap != null ) {
    variableMap.clear();

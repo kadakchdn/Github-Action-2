@@ -53,6 +53,33 @@ bC.add( new ByFactory( ByXPath.class, "//*[@name=\"email\"]", "NameRule", "32438
 objectMap.put( "32438.2917", bC );
 
 
+bC = new ByFactoryCollection("fb_logo_8ilhimg", "32438.2966", "");
+bC.add( new ByFactory( ByXPath.class, "//img[@class='fb_logo _8ilh img']", "AttributeRule", "32438.2968", "" ) );
+bC.add( new ByFactory( ByXPath.class, "//*[@class='fb_logo _8ilh img']", "AttributeRule", "32438.2970", "" ) );
+bC.add( new ByFactory( ByXPath.class, "//img[@src='https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg']", "AttributeRule", "32438.2972", "" ) );
+bC.add( new ByFactory( ByXPath.class, "//*[@src='https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg']", "AttributeRule", "32438.2974", "" ) );
+bC.add( new ByFactory( ByXPath.class, "//img[@alt='Facebook']", "AttributeRule", "32438.2976", "" ) );
+bC.add( new ByFactory( ByXPath.class, "//*[@alt='Facebook']", "AttributeRule", "32438.2978", "" ) );
+bC.add( new ByFactory( ByXPath.class, "//div[@class='_8ice']/img[1]", "ParentRule[AttributeRule]", "32438.2980", "" ) );
+bC.add( new ByFactory( ByXPath.class, "//*[@class='_8ice']/img[1]", "ParentRule[AttributeRule]", "32438.2982", "" ) );
+bC.add( new ByFactory( ByXPath.class, "/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/img[1]", "AbsoluteRule", "32438.2984", "" ) );
+
+
+objectMap.put( "32438.2966", bC );
+/* Page: default 
+    
+    */
+
+    /*
+    Site: www.google.com
+    Add a description of www.google.com
+    */
+    /* Page: Google 
+    
+    */
+
+    
+
 
 
   }
